@@ -49,7 +49,7 @@ app.get('/convert/pastebin', async (req, res) => {
       res.status(200).json({
         status: 200,
         creator: "YannXD",
-        data: { pasteTitle }
+        data: { response }
       });
     } catch (error) {
       res.status(500).json({ error: error.message });
