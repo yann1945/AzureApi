@@ -51,7 +51,7 @@ module.exports = function(app) {
         const response = await thinkany(text);
         res.status(200).json({
           status: 200,
-          creator: "Lenwy",
+          creator: "YannXD",
           data: response,
         });
       } catch (error) {
