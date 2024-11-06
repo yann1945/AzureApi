@@ -37,3 +37,22 @@ async function pasteBin(url) {
         return 'Terjadi kesalahan saat scraping: ' + error.message;
     }
 }
+
+
+app.get('/convert/pastebin', async (req, res) => {
+    try {
+      const url = req.query.url;
+      if (!text) {
+        return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+      }
+      const response = await pasteBin(url);
+      res.status(200).json({
+        status: 200,
+        creator: "YannXD",
+        data: { pasteTitle }
+      });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+};
