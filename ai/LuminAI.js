@@ -24,7 +24,7 @@ app.get('/luminai', async (req, res) => {
       const response = await fetchContent(text);
       res.status(200).json({
         status: 200,
-        creator: "Lenwy",
+        creator: "YannXD",
         data: response
       });
     } catch (error) {
